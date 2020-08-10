@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body {
+      background-color: white;
+      } 
+    h1 {
+      text-align: center;
+      }
+    p {
+
+    }
+    div {
+      background-color: lightgrey; 
+      width: 100%;
+      min-width: 100px;
+      max-width: 1000px;
+      display: -webkit-flex;
+      border: 2px solid black;
+      overflow: hidden;
+      border-radius: 5px; 
+      margin: 5px; 
+      padding: 10px;}
+    label {
+      font: bold;}
+    input {
+      -webkit-flex: 1;
+      width: 100%;
+      margin: 2px; 
+      }
+    button {
+      width: 100%; 
+      }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OAuth2</title>
+  <script src="./js/script.js"></script>
+
+</head>
+<body>
+  <h1>Auhtentication using OAuth2 protocol and "Authorization Code flow" (Server flow)</h1>
+  <p>Description here</p>
+  <div id="inputdiv">
+    <form id="form1">
+      <label>Client ID: </label><br> 
+      <input type="text" id="clientid" required><br>
+      <label>Client Secret: </label><br> 
+      <input type="text" id="clientsecret" required><br>
+      <label>Redirect URI: </label><br> 
+      <input type="text" id="redirecturi" required><br>
+
+      <input type="button" value="Authorize" id="authbutton"><br>
+    </form>
+  </div><br>
+  <div id="authdiv">
+    <form id="form2">
+      
+     <label>Code: </label><br> 
+     <input type="text" id="Tcode" readonly><br>
+      <label>Token: </label><br> 
+      <input type="text" id="token" readonly><br>
+      <label>Refresh Token: </label><br> 
+      <input type="text" id="rtoken" readonly><br>
+    </form>
+  </div>
+
+</body>
+</html>
